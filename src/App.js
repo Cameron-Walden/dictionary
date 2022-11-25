@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import "./App.css";
-import { FormControl, InputLabel, Input, Button } from "@mui/material";
+import Form from "./components/Form";
 import Definition from "./components/Definition";
+import "./App.css";
 
 function App() {
   const [word, setWord] = useState("");
@@ -20,15 +20,9 @@ function App() {
     }
   };
 
-  const handleSearch = (e) => setWord(e.target.value);
-
   return (
     <div className="App">
-      <FormControl onChange={handleSearch} value={word}>
-        <InputLabel>Get Definition</InputLabel>
-        <Input id="my-input" aria-describedby="my-helper-text" />
-        <Button onClick={getDefinition}>SEARCH</Button>
-      </FormControl>
+      <Form word={word} setWord={setWord} getDefinition={getDefinition} />
       <Definition word={word} definition={definition} />
     </div>
   );
