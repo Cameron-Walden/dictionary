@@ -13,7 +13,8 @@ function App() {
       let getWord = await axios.get(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
       );
-      // console.log(getWord.data, "getWord.data");
+      console.log(getWord.data, "getWord.data");
+      
       setDefinition(getWord.data);
     } catch (error) {
       console.log(error);
