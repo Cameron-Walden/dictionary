@@ -5,6 +5,7 @@ import {
   AccordionDetails,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Box from "@mui/material/Box";
 
 export default function DefinitionAccordion({ definition }) {
   return (
@@ -18,11 +19,13 @@ export default function DefinitionAccordion({ definition }) {
           <Typography>Definitions</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography variant="h5" component="div">
+          <Typography component="div">
             {definition.map((def) =>
               def.meanings.map((meaning) =>
                 meaning.definitions.map((defMean, idx) => (
-                  <Typography key={idx}>{defMean.definition}</Typography>
+                  <Box key={idx} sx={{ fontweight: 'bold', typography: 'body1'  }}>
+                    {defMean.definition}
+                  </Box>
                 ))
               )
             )}
