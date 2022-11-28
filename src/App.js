@@ -19,7 +19,6 @@ function App() {
       console.log(error);
     }
   };
-
   return (
     <div className="App">
       <Form word={word} setWord={setWord} getDefinition={getDefinition} />
