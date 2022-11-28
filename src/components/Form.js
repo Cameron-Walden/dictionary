@@ -1,8 +1,7 @@
 import { FormControl, InputLabel, Input, Button } from "@mui/material";
 
 export default function Form({ word, setWord, getDefinition }) {
-    const handleSearch = (e) => setWord(e.target.value);
-
+  const handleSearch = (e) => setWord(e.target.value);
 
   return (
     <div>
