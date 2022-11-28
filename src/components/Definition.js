@@ -7,6 +7,7 @@ import {
   AccordionDetails,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Phonetics from "./Phonetics";
 
 export default function Definition({ word, definition }) {
   return (
@@ -14,6 +15,7 @@ export default function Definition({ word, definition }) {
       {word ? (
         <Card sx={{ minWidth: 275 }}>
           <CardContent>
+          <Phonetics definition={definition}/>
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
