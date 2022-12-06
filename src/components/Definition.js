@@ -3,6 +3,7 @@ import Word from "./Word";
 import Synonym from "./Synonym";
 import DefinitionAccordion from "./DefinitionAccordion";
 import Phonetics from "./Phonetics";
+import Antonym from "./antonym/Antonym";
 
 export default function Definition({ definition, hasSubmitted }) {
   return (
@@ -12,6 +13,7 @@ export default function Definition({ definition, hasSubmitted }) {
           <CardContent>
             <Word definition={definition} />
             <Synonym definition={definition} />
+            <Antonym definition={definition}/>
             <Phonetics definition={definition} />
             <DefinitionAccordion definition={definition} />
           </CardContent>
