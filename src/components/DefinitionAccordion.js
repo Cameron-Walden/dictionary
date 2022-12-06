@@ -23,8 +23,11 @@ export default function DefinitionAccordion({ definition }) {
             {definition.map((def) =>
               def.meanings.map((meaning) =>
                 meaning.definitions.map((defMean, idx) => (
-                  <Box key={idx} sx={{ fontweight: 'bold', typography: 'body1'  }}>
-                    {defMean.definition}
+                  <Box
+                    key={idx}
+                    sx={{ fontweight: "bold", typography: "body1" }}
+                  >
+                    <p>{defMean.definition}</p>
                   </Box>
                 ))
               )
